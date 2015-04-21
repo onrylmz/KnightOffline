@@ -249,7 +249,6 @@ public class Simulation extends JPanel
             
             Simulation.getInstance().getElMorads().set(i, kn);
             
-            System.out.println(kn.getScore());
         }
         
         for(int i = 0; i < Simulation.getInstance().getKarus().size(); i++)
@@ -270,7 +269,6 @@ public class Simulation extends JPanel
             }
             Simulation.getInstance().getKarus().set(i, kn);
             
-            System.out.println(kn.getScore());
         }
     }
     
