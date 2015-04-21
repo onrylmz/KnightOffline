@@ -14,13 +14,13 @@ import java.util.Timer;
  */
 public class Noob extends KnightDecorator{
 
-    public Noob(int xPos, int yPos, Team team) {
-        super(xPos, yPos, team);
+    public Noob(Knight otherKnight) {
+        super(otherKnight);
     }
 
     @Override
     public void draw(Graphics g) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        super.draw(g);
     }
     
 }

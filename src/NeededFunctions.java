@@ -78,6 +78,18 @@ public class NeededFunctions {
         g.fillOval((int) x - radius, (int) y - radius, 2 * radius , 2 * radius);
     }
     
+    public void drawGradeDecorator(Graphics g, double x, double y, int radius, int whichGrade)
+    {
+        if(whichGrade == 1)
+            g.setColor(Color.YELLOW);
+        else if(whichGrade == 2)
+            g.setColor(Color.PINK);
+        else
+            g.setColor(Color.CYAN);
+        g.drawOval((int) x - radius, (int) y - radius, 5, 5);
+        g.fillOval((int) x - radius, (int) y - radius, 5, 5);
+    }
+    
     public void drawAndFillPriest(Graphics g, double x, double y, int width, int height)
     {
         g.drawRect((int)x, (int)y, width, height);

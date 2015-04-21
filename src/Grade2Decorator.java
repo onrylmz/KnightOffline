@@ -19,12 +19,29 @@ import java.util.Timer;
 public class Grade2Decorator extends KnightDecorator
 {
 
-    public Grade2Decorator(int xPos, int yPos, Team team) {
-        super(xPos, yPos, team);
+    public Grade2Decorator(Knight otherKnight) {
+        super(otherKnight);
     }
 
     @Override
     public void draw(Graphics g) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+        super.draw(g);
+        
+        if(decoratorKnight instanceof Priest)
+        {
+            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos(), decoratorKnight.getyPos(), 7, 2);
+            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos() + 15, decoratorKnight.getyPos() + 33, 7, 2);            
+        }
+        else if(decoratorKnight instanceof Rogue)
+        {
+            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos(), decoratorKnight.getyPos(), 12, 2);
+            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos() + 10, decoratorKnight.getyPos() + 22, 12, 2);        
+        }
+        else if(decoratorKnight instanceof Mage)
+        {
+            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos(), decoratorKnight.getyPos(), 12, 2);            
+            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos(), decoratorKnight.getyPos() + 20, 12, 2);        
+        }
     }
 }

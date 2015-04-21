@@ -1,4 +1,7 @@
 
+import java.awt.Graphics;
+
+
 
 //
 //
@@ -16,9 +19,17 @@
 
 public abstract class KnightDecorator extends Knight
 {
-    private BasicKnight decoratorKnight;
+    protected Knight decoratorKnight;
 
-    public KnightDecorator(int xPos, int yPos, Team team) {
-        super(xPos, yPos, team);
+    public KnightDecorator(Knight otherKnight) {
+        super(otherKnight.getxPos(), otherKnight.getyPos(), otherKnight.getTeam());
+        this.decoratorKnight = otherKnight;
     }
+    
+    @Override
+    public void draw(Graphics g)
+    {
+        decoratorKnight.draw(g);
+    }
+    
 }

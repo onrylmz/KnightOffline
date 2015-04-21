@@ -167,6 +167,7 @@ public class Simulation extends JPanel
         
         Display.getInstance(Simulation.getInstance());
         Simulation.getInstance().initialKnightGenerator(teamOfElMorad, teamOfKarus);
+
         
         while(!Simulation.getInstance().isPaused){
             
@@ -175,8 +176,9 @@ public class Simulation extends JPanel
                 Thread.sleep(40);
                 Display.getInstance().repaint();
                 //Simulation.getInstance().repaint();
+                
                 Simulation.getInstance().stepAll();
-
+                
                 /*Strategy and Attack Checker*/
                 if(counter == 25)
                 {
@@ -186,7 +188,7 @@ public class Simulation extends JPanel
                 counter++;
                 
                 Simulation.getInstance().deadChecker();
-                
+                Simulation.getInstance().decoratorChecker();
                 
             } catch (Exception e) {
             }
@@ -221,6 +223,54 @@ public class Simulation extends JPanel
         catch(ConcurrentModificationException e)
         {
             
+        }
+    }
+    
+    private void decoratorChecker()
+    {
+        Knight kn = null;
+        
+        for(int i = 0; i < Simulation.getInstance().getElMorads().size(); i++)
+        {
+            kn = Simulation.getInstance().getElMorads().get(i);
+            
+            if(76 <= kn.getScore() && kn.getScore() <= 150)
+            {
+                kn = new Grade3Decorator(kn);
+            }
+            else if(151 <= kn.getScore() && kn.getScore() <= 300)
+            {
+                kn = new Grade2Decorator(kn);
+            }
+            else if(301 <= kn.getScore())
+            {
+                kn = new Grade1Decorator(kn);
+            }   
+            
+            Simulation.getInstance().getElMorads().set(i, kn);
+            
+            System.out.println(kn.getScore());
+        }
+        
+        for(int i = 0; i < Simulation.getInstance().getKarus().size(); i++)
+        {
+            kn = Simulation.getInstance().getKarus().get(i);
+            
+            if(76 <= kn.getScore() && kn.getScore() <= 150)
+            {
+                kn = new Grade3Decorator(kn);
+            }
+            else if(151 <= kn.getScore() && kn.getScore() <= 300)
+            {
+                kn = new Grade2Decorator(kn);
+            }
+            else if(301 <= kn.getScore())
+            {
+                kn = new Grade1Decorator(kn);
+            }
+            Simulation.getInstance().getKarus().set(i, kn);
+            
+            System.out.println(kn.getScore());
         }
     }
     
