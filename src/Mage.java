@@ -23,9 +23,9 @@ public class Mage extends BasicKnight
 
     public Mage(double xPos, double yPos, Team team) {
         super(xPos, yPos, team);
-        this.setHealth(10000);
+        this.setHealth(400);
         this.setSpeed(75);
-        this.setMaxHealth(10000);
+        this.setMaxHealth(400);
     }
     
     @Override

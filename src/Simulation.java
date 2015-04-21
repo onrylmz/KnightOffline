@@ -229,69 +229,6 @@ public class Simulation extends JPanel
     private void decoratorChecker()
     {
         Knight kn = null;
-        /*ArrayList<Knight> temp = new ArrayList<>();
-        
-        for (Iterator<Knight> iterator = Simulation.getInstance().getElMorads().iterator(); iterator.hasNext();) {
-            Knight next = iterator.next();
-            
-            
-            if(76 <= next.getScore() && next.getScore() <= 150)
-            {
-                iterator.remove();
-                
-                kn = new Grade3Decorator(next);
-            }
-            else if(151 <= next.getScore() && next.getScore() <= 300)
-            {
-                iterator.remove();
-                
-                kn = new Grade2Decorator(next);
-            }
-            else if(301 <= next.getScore())
-            {
-                iterator.remove();
-                
-                kn = new Grade1Decorator(next);
-            }
-            if(kn != null)
-                temp.add(kn);
-            
-        }
-        
-        Simulation.getInstance().getElMorads().addAll(temp);
-        
-        
-        temp = new ArrayList<>();
-        
-        for (Iterator<Knight> iterator = Simulation.getInstance().getKarus().iterator(); iterator.hasNext();) {
-            Knight next = iterator.next();
-            
-            
-            if(76 <= next.getScore() && next.getScore() <= 150)
-            {
-                iterator.remove();
-                
-                kn = new Grade3Decorator(next);
-            }
-            else if(151 <= next.getScore() && next.getScore() <= 300)
-            {
-                iterator.remove();
-                
-                kn = new Grade2Decorator(next);
-            }
-            else if(301 <= next.getScore())
-            {
-                iterator.remove();
-                
-                kn = new Grade1Decorator(next);
-            }
-            
-            if(kn != null)
-                temp.add(kn);
-            
-        }
-        
-        Simulation.getInstance().getKarus().addAll(temp);*/
         
         for(int i = 0; i < Simulation.getInstance().getElMorads().size(); i++)
         {
@@ -299,6 +236,8 @@ public class Simulation extends JPanel
             
             if(76 <= kn.getScore() && kn.getScore() <= 150)
             {
+                if(!kn.getClass().equals(Grade3Decorator.class))
+                    System.out.println(kn.getClass());
                 kn = new Grade3Decorator(kn);
             }
             else if(151 <= kn.getScore() && kn.getScore() <= 300)
