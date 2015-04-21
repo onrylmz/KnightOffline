@@ -46,7 +46,7 @@ public class Rogue extends BasicKnight
                     distance = (int) NeededFunctions.getInstance().calculateDistance(kn, this);
                     
                     this.setSpeed(200);
-                    if(distance <= 1)
+                    if(distance <= 10)
                     {
                         
                         if(kn.getHealth() < 250)
@@ -99,7 +99,7 @@ public class Rogue extends BasicKnight
                     distance = (int) NeededFunctions.getInstance().calculateDistance(kn, this);
                     this.setSpeed(200);
 
-                    if(distance <= 1)
+                    if(distance <= 10)
                     {
                         if(kn.getHealth() < 250)
                         {
@@ -155,7 +155,7 @@ public class Rogue extends BasicKnight
             {
                 distance = NeededFunctions.getInstance().calculateDistance(kn, this);
                 
-                if(distance == 0)
+                if(distance <= 10)
                 {
                     if(kn.getHealth() < 150)
                     {
@@ -196,7 +196,7 @@ public class Rogue extends BasicKnight
             {
                 distance = NeededFunctions.getInstance().calculateDistance(kn, this);
                 
-                if(distance == 0)
+                if(distance <= 10)
                 {
                     
                     if(kn.getHealth() < 150)

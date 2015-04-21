@@ -88,7 +88,7 @@ public class Priest extends BasicKnight
             for(Knight kn : Simulation.getInstance().getKarus())
             {
                 distance = (int) NeededFunctions.getInstance().calculateDistance(this, kn);
-                if(distance == 0)
+                if(distance <= 10)
                 {
                     if(kn.getHealth() < 150)
                     {
@@ -128,7 +128,7 @@ public class Priest extends BasicKnight
             for(Knight kn : Simulation.getInstance().getElMorads())
             {
                 distance = (int) NeededFunctions.getInstance().calculateDistance(this, kn);
-                if(distance == 0)
+                if(distance <= 10)
                 {
                     if(kn.getHealth() < 150)
                     {

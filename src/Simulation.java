@@ -236,8 +236,6 @@ public class Simulation extends JPanel
             
             if(76 <= kn.getScore() && kn.getScore() <= 150)
             {
-                if(!kn.getClass().equals(Grade3Decorator.class))
-                    System.out.println(kn.getClass());
                 kn = new Grade3Decorator(kn);
             }
             else if(151 <= kn.getScore() && kn.getScore() <= 300)

@@ -256,8 +256,8 @@ public class Display extends JFrame
         /*Set Title*/
         setTitle("KO");
         
-        Container cp = getContentPane();
-        cp.setLayout(new FlowLayout());
+        Container container = getContentPane();
+        container.setLayout(new FlowLayout());
         /*Create Panel*/
         JPanel infoPanel = new JPanel(){
             @Override
@@ -355,11 +355,11 @@ public class Display extends JFrame
         infoPanel.setSize(300,600);
         infoPanel.setLayout(null);
         
-        cp.add(infoPanel);        
+        container.add(infoPanel);        
         
 
         
-        cp.add(gameArena);
+        container.add(gameArena);
         
         
         
