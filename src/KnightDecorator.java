@@ -32,4 +32,109 @@ public abstract class KnightDecorator extends Knight
         decoratorKnight.draw(g);
     }
     
+    @Override
+    public void act()
+    {
+        decoratorKnight.act();
+    }
+
+    @Override
+    public void meleeAttack() {
+        decoratorKnight.meleeAttack(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void rangedAttack() {
+        decoratorKnight.rangedAttack(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setIsRangedAttack(boolean isRangedAttack) {
+        decoratorKnight.setIsRangedAttack(isRangedAttack); //To change body of generated methods, choose Tools | Templates.
+    }
+
+   
+
+    @Override
+    public void setTeam(Team team) {
+        decoratorKnight.setTeam(team); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Team getTeam() {
+        return decoratorKnight.getTeam(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setScore(int score) {
+        decoratorKnight.setScore(score); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int getScore() {
+        return decoratorKnight.getScore(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setStrategy(Strategy strategy) {
+        decoratorKnight.setStrategy(strategy); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Strategy getStrategy() {
+        return decoratorKnight.getStrategy(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setSpeed(int speed) {
+        decoratorKnight.setSpeed(speed); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int getSpeed() {
+        return decoratorKnight.getSpeed(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setHealth(int health) {
+        decoratorKnight.setHealth(health); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int getHealth() {
+        return decoratorKnight.getHealth(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setMaxHealth(int maxHealth) {
+        decoratorKnight.setMaxHealth(maxHealth); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int getMaxHealth() {
+        return decoratorKnight.getMaxHealth(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setyPos(double yPos) {
+        decoratorKnight.setyPos(yPos); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public double getyPos() {
+        return decoratorKnight.getyPos(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setxPos(double xPos) {
+        decoratorKnight.setxPos(xPos); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public double getxPos() {
+        return decoratorKnight.getxPos(); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
+    
 }

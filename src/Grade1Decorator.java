@@ -29,25 +29,126 @@ public class Grade1Decorator extends KnightDecorator
         
         if(decoratorKnight instanceof Priest)
         {
-            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos(), decoratorKnight.getyPos(), 7, 2);
-            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos() + 15, decoratorKnight.getyPos() + 33, 7, 2);            
-            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos() + 33, decoratorKnight.getyPos() + 1, 7, 2);            
+            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos(), decoratorKnight.getyPos(), 7, 1);
+//            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos() + 15, decoratorKnight.getyPos() + 33, 7, 2);            
+//            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos() + 33, decoratorKnight.getyPos() + 1, 7, 2);            
 
         }
         else if(decoratorKnight instanceof Rogue)
         {
-            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos(), decoratorKnight.getyPos(), 12, 2);
-            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos() + 10, decoratorKnight.getyPos() + 22, 12, 2);        
-            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos() + 20, decoratorKnight.getyPos() , 12, 2);                
+            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos(), decoratorKnight.getyPos(), 12, 1);
+//            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos() + 10, decoratorKnight.getyPos() + 22, 12, 2);        
+//            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos() + 20, decoratorKnight.getyPos() , 12, 2);                
         }
         else if(decoratorKnight instanceof Mage)
         {
-            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos(), decoratorKnight.getyPos(), 12, 2);            
-            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos(), decoratorKnight.getyPos() + 20, 12, 2);        
-            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos() + 20, decoratorKnight.getyPos() , 12, 2);        
+            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos(), decoratorKnight.getyPos(), 12, 1);            
+//            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos(), decoratorKnight.getyPos() + 20, 12, 2);        
+//            NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos() + 20, decoratorKnight.getyPos() , 12, 2);        
         }
+        
+        NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos(), decoratorKnight.getyPos(), 12, 3);            
+        NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos(), decoratorKnight.getyPos() + 15, 12, 2);            
+        NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos() + 15, decoratorKnight.getyPos() + 15, 12, 1);            
 
     }
     
+    @Override
+    public void act()
+    {
+        super.act();
+    }
+
+    @Override
+    public double getxPos() {
+        return super.getxPos(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setxPos(double xPos) {
+        super.setxPos(xPos); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public double getyPos() {
+        return super.getyPos(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setyPos(double yPos) {
+        super.setyPos(yPos); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int getMaxHealth() {
+        return super.getMaxHealth(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setMaxHealth(int maxHealth) {
+        super.setMaxHealth(maxHealth); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int getHealth() {
+        return super.getHealth(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setHealth(int health) {
+        super.setHealth(health); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int getSpeed() {
+        return super.getSpeed(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setSpeed(int speed) {
+        super.setSpeed(speed); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Strategy getStrategy() {
+        return super.getStrategy(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setStrategy(Strategy strategy) {
+        super.setStrategy(strategy); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int getScore() {
+        return super.getScore(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setScore(int score) {
+        super.setScore(score); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Team getTeam() {
+        return super.getTeam(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setTeam(Team team) {
+        super.setTeam(team); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void rangedAttack() {
+        super.rangedAttack(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void meleeAttack() {
+        super.meleeAttack(); //To change body of generated methods, choose Tools | Templates.
+    }
      
+    
+    
 }

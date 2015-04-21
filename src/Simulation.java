@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.ConcurrentModificationException;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import java.util.logging.Level;
@@ -167,7 +168,6 @@ public class Simulation extends JPanel
         
         Display.getInstance(Simulation.getInstance());
         Simulation.getInstance().initialKnightGenerator(teamOfElMorad, teamOfKarus);
-
         
         while(!Simulation.getInstance().isPaused){
             
@@ -178,7 +178,7 @@ public class Simulation extends JPanel
                 //Simulation.getInstance().repaint();
                 
                 Simulation.getInstance().stepAll();
-                
+                                
                 /*Strategy and Attack Checker*/
                 if(counter == 25)
                 {
@@ -229,6 +229,69 @@ public class Simulation extends JPanel
     private void decoratorChecker()
     {
         Knight kn = null;
+        /*ArrayList<Knight> temp = new ArrayList<>();
+        
+        for (Iterator<Knight> iterator = Simulation.getInstance().getElMorads().iterator(); iterator.hasNext();) {
+            Knight next = iterator.next();
+            
+            
+            if(76 <= next.getScore() && next.getScore() <= 150)
+            {
+                iterator.remove();
+                
+                kn = new Grade3Decorator(next);
+            }
+            else if(151 <= next.getScore() && next.getScore() <= 300)
+            {
+                iterator.remove();
+                
+                kn = new Grade2Decorator(next);
+            }
+            else if(301 <= next.getScore())
+            {
+                iterator.remove();
+                
+                kn = new Grade1Decorator(next);
+            }
+            if(kn != null)
+                temp.add(kn);
+            
+        }
+        
+        Simulation.getInstance().getElMorads().addAll(temp);
+        
+        
+        temp = new ArrayList<>();
+        
+        for (Iterator<Knight> iterator = Simulation.getInstance().getKarus().iterator(); iterator.hasNext();) {
+            Knight next = iterator.next();
+            
+            
+            if(76 <= next.getScore() && next.getScore() <= 150)
+            {
+                iterator.remove();
+                
+                kn = new Grade3Decorator(next);
+            }
+            else if(151 <= next.getScore() && next.getScore() <= 300)
+            {
+                iterator.remove();
+                
+                kn = new Grade2Decorator(next);
+            }
+            else if(301 <= next.getScore())
+            {
+                iterator.remove();
+                
+                kn = new Grade1Decorator(next);
+            }
+            
+            if(kn != null)
+                temp.add(kn);
+            
+        }
+        
+        Simulation.getInstance().getKarus().addAll(temp);*/
         
         for(int i = 0; i < Simulation.getInstance().getElMorads().size(); i++)
         {

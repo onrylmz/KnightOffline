@@ -23,9 +23,9 @@ public class Mage extends BasicKnight
 
     public Mage(double xPos, double yPos, Team team) {
         super(xPos, yPos, team);
-        this.setHealth(400);
+        this.setHealth(10000);
         this.setSpeed(75);
-        this.setMaxHealth(400);
+        this.setMaxHealth(10000);
     }
     
     @Override
@@ -140,6 +140,8 @@ public class Mage extends BasicKnight
                         Simulation.getInstance().increaseTotalKillOfTeam(Simulation.getTeamOfElMorad());
                         Simulation.getInstance().increaseScoreOfTeam(Simulation.getTeamOfElMorad());
                         
+                        this.setScore(this.getScore() + 75);
+                        
                         index = Simulation.getInstance().getKarus().indexOf(kn);
                         
                     }
@@ -174,7 +176,7 @@ public class Mage extends BasicKnight
                         Simulation.getInstance().increaseTotalKillOfTeam(Simulation.getTeamOfKarus());
                         Simulation.getInstance().increaseScoreOfTeam(Simulation.getTeamOfKarus());
                         
-                        
+                        this.setScore(this.getScore() + 75);
                         
                         index = Simulation.getInstance().getElMorads().indexOf(kn);
                         

@@ -24,7 +24,7 @@ public class RandomMove extends Strategy
     public void act(Knight knight) {        
         
         Random rand = new Random();
-        int random1 = 397 + rand.nextInt(10);
+        int random1 = 397 + rand.nextInt(60);
         int random2 = 117 + rand.nextInt(10);
         
         double distanceX = random1 - knight.getxPos();
@@ -39,7 +39,7 @@ public class RandomMove extends Strategy
         else
             knight.setxPos(knight.getxPos());
         
-        if(knight.getyPos() < 500)
+        if(50 < knight.getyPos() && knight.getyPos() < 500)
             knight.setyPos(knight.getyPos() + 
                         distanceY / distance * knight.getSpeed() / 35.0);
         else

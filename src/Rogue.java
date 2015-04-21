@@ -22,9 +22,9 @@ public class Rogue extends BasicKnight
     
     public Rogue(double xPos, double yPos, Team team) {
         super(xPos, yPos, team);
-        this.setHealth(10000);
+        this.setHealth(500);
         this.setSpeed(100);
-        this.setMaxHealth(10000);
+        this.setMaxHealth(500);
     }
     
     @Override

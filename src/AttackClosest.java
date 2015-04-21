@@ -59,7 +59,7 @@ public class AttackClosest extends Strategy
                         distanceX / closestDistance * knight.getSpeed() / 35.0);
         
         
-        if(knight.getyPos() < 500)
+        if(50 < knight.getyPos() && knight.getyPos() < 500)
             knight.setyPos(knight.getyPos() +
                         distanceY / closestDistance * knight.getSpeed() / 35.0);
         

@@ -54,7 +54,7 @@ public class AttackWeakest extends Strategy
         
         
         
-        if(knight.getyPos() < 500)
+        if(50 < knight.getyPos() && knight.getyPos() < 500)
             knight.setyPos(knight.getyPos() + 
                         distanceY / distance * knight.getSpeed() / 35.0);
             
