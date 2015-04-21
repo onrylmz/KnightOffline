@@ -48,6 +48,7 @@ public class Rogue extends BasicKnight
                     this.setSpeed(200);
                     if(distance <= 1)
                     {
+                        
                         if(kn.getHealth() < 250)
                         {
                             Simulation.getInstance().increaseTotalDamageOfTeam(Simulation.getTeamOfElMorad(), kn.getHealth());   

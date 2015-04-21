@@ -35,7 +35,6 @@ public class Grade3Decorator extends KnightDecorator
         }
         else if(decoratorKnight instanceof Rogue)
         {
-            
             NeededFunctions.getInstance().drawGradeDecorator(g, decoratorKnight.getxPos(), decoratorKnight.getyPos(), 12, 3);
         }
         else if(decoratorKnight instanceof Mage)
