@@ -65,12 +65,13 @@ public class NeededFunctions {
     {
         /*Draw Circle Around Knight*/
         
+        
         if(kn.equalsIgnoreCase("Priest"))
-            g.setColor(Color.GREEN);
+            g.setColor(new Color(0, 128, 0));
         else if(kn.equalsIgnoreCase("Rogue"))
-            g.setColor(Color.ORANGE);
+            g.setColor(new Color(255, 165, 0));
         else
-            g.setColor(Color.MAGENTA);
+            g.setColor(new Color(255, 0, 255));
         
         g.drawOval((int) x - radius, (int) y - radius, 2 * radius, 2 * radius);
         
